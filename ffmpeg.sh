@@ -1,0 +1,1 @@
+for video in videos/*.mp4; do ffmpeg -i $video -vf fps=1/10 images/$(basename -s mp4 $video)%05d.jpg; done
